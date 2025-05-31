@@ -4,7 +4,8 @@ const fs = require('fs');
 const path = require('path');
 const { instagramGetUrl } = require('instagram-url-direct');
 
-const token = '8101551595:AAGkVgilvl6fcefYN6X7llF8k4AVPdfjNbM';
+const token = process.env.BOT_TOKEN;
+
 const bot = new TelegramBot(token, { polling: true });
 
 const downloadDir = './downloads';
